@@ -33,7 +33,7 @@ export default class Home extends Component {
     return (
       <div className="container center" >
         <header className="jumbotron">
-        <h3 style={{color:"green"}}><i class="fa fa-home"></i> This is home page <i class="fa fa-home"></i></h3>
+        <h3 style={{color:"green"}}><i class="fa fa-home"></i> This is home <i class="fa fa-home"></i></h3>
         <div class="spinner-grow text-muted"></div>
 <div class="spinner-grow text-primary"></div>
 <div class="spinner-grow text-success"></div>
