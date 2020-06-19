@@ -15,7 +15,7 @@ export default class Profile extends Component {
 
     return (
       <div className="container">
-        <header className="jumbotron">
+        <header style={{backgroundColor:"#2092EC"}} className="jumbotron bg text-white">
           <h3>
             <strong>{currentUser.username}</strong> Profile
           </h3>

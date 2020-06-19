@@ -8,17 +8,17 @@ import org.springframework.data.mongodb.repository.Query;
 
 import java.util.List;
 
-public interface QuestionRepository extends MongoRepository<Question, String>{
+public interface QuestionRepository extends MongoRepository<Question, String> {
 
     Question findBy_id(Object _id);
 
     @Aggregation("{'$group':{_id :'$exam_name', total_Questions : {$sum : 1 }, total_marks : {$sum: '$mark'}}}")
-    List<Question> countByQuestionsAndMarks(Sort created_date);
+    List<Question> countByQuestionsAndMarks();
 
-//    @Aggregation("{'$group':{_id: '$exam_name', total_marks : {$sum: '$mark'}}}")
-//    List<Question> totalmarksGroubByexam_name();
+    @Aggregation("{'$group':{_id :'$exam_name'}}")
+    List<Question> userExamCount();
 
-    @Query("{'exam_name' : ?0}")
+    @Aggregation(pipeline = {"{ $match : { exam_name : ?0 } }", "{ $sample : { size: 10 } }"})
     List<Question> userSelectExam(String exam_name);
 
     @Aggregation(value = "{'$group':{_id :'$exam_name'}}")

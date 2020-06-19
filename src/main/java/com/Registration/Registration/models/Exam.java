@@ -3,22 +3,18 @@ package com.Registration.Registration.models;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.security.auth.Subject;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Timer;
 
 @Document(collection = "exam")
 public class Exam {
 
     @Id
-    private ObjectId _id;
+    private String _id;
 
     @NotBlank
     @Size(max = 10)
@@ -37,13 +33,12 @@ public class Exam {
     @NotBlank
     private String duration;
 
-    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss", timezone="GMT")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT")
     private Date created_date;
 
     private List<Question> questions;
 
     public Exam(@Size(max = 10) String exam_id, @Size(max = 30) String exam_name, String duration, String exam_time, String exam_date) {
-        this._id = _id;
         this.exam_id = exam_id;
         this.exam_name = exam_name;
         this.duration = duration;
@@ -53,9 +48,10 @@ public class Exam {
     }
 
     public String get_id() {
-        return _id.toHexString();    }
+        return _id;
+    }
 
-    public void set_id(ObjectId _id) {
+    public void set_id(String _id) {
         this._id = _id;
     }
 

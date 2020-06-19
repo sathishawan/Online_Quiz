@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./App.css";
 import AuthService from "./services/auth.service";
-
 import Home from "./cmp/Home";
 import Profile from "./cmp/profile";
 import Register from "./cmp/register";
@@ -29,7 +28,8 @@ import UserDashboard from "./cmp/user/dashboard";
 import UserExamList from "./cmp/user/exam/list";
 import UserExamTry from "./cmp/user/exam/try";
 import UserExamResult from "./cmp/user/exam/result";
-// import MainExam from "./cmp/user/exam/mainexam";
+import Forgetpassword from "./cmp/Forgetpassword";
+import Resetpassword from "./cmp/Resetpassword"
 import Protected from "./cmp/Protected"
 import Error from "./cmp/Error";
 
@@ -47,6 +47,7 @@ class App extends Component {
 
   componentDidMount() {
     const user = AuthService.getCurrentUser();
+    console.log(user)
 
     if (user) {
       this.setState({
@@ -82,14 +83,14 @@ class App extends Component {
               &nbsp;&nbsp;&nbsp;
 
             {showUserBoard && (
-            <a className="navbar-brand mr-3"><span className="username"><span>A</span><span>w</span><span>a</span><span>n</span> &nbsp;<span>Q</span><span>u</span><span>i</span><span>z</span></span></a>
+              <a className="navbar-brand mr-3"><span className="username"><span>A</span><span>w</span><span>a</span><span>n</span> &nbsp;<span>Q</span><span>u</span><span>i</span><span>z</span></span></a>
             )}
 
 
             <div className="navbar-nav mr-auto">
               <li className="nav-item">
                 <Link style={{ color: "yellow" }} title="Home" to={"/home"} className="nav-link active">
-                <i style={{ color: "yellow" }} className="fa fa-home"></i>  Home 
+                  <i style={{ color: "yellow" }} className="fa fa-home"></i>  Home
                 </Link>
               </li>
               &nbsp;&nbsp;&nbsp;
@@ -98,7 +99,7 @@ class App extends Component {
               {showAdminBoard && (
                 <li className="nav-item">
                   <Link style={{ color: "yellow" }} title="Dashboard" to={"/admin/dashboard"} className="nav-link active">
-                  <i style={{ color: "yellow" }} className="fa fa-dashboard"></i> Dashboard 
+                    <i style={{ color: "yellow" }} className="fa fa-dashboard"></i> Dashboard
                   </Link>
                 </li>
               )}
@@ -108,7 +109,7 @@ class App extends Component {
               {showUserBoard && (
                 <li className="nav-item">
                   <Link style={{ color: "yellow" }} title="Dashboard" to={"/dashboard/index"} className="nav-link active">
-                  <i style={{ color: "yellow" }} className="fa fa-dashboard"></i> Dashboard 
+                    <i style={{ color: "yellow" }} className="fa fa-dashboard"></i> Dashboard
                   </Link>
                 </li>
               )}
@@ -129,7 +130,7 @@ class App extends Component {
               <div className="navbar-nav ml-auto">
                 <li className="nav-item">
                   <Link style={{ color: "yellow" }} title={currentUser.username} to={"/profile"} className="nav-link active">
-                  <i class="fa fa-user-circle" aria-hidden="true"></i> Hi, {currentUser.username}
+                    <i class="fa fa-user-circle" aria-hidden="true"></i> Hi, {currentUser.username}
                   </Link>
                 </li>
                 &nbsp;&nbsp;&nbsp;
@@ -186,7 +187,8 @@ class App extends Component {
               <Protected exact path="/exam/list" component={UserExamList} />
               <Protected exact path="/exam/try" component={UserExamTry} />
               <Protected exact path="/result/list" component={UserExamResult} />
-              {/* <Protected exact path="/exam/mainexam" component={MainExam} /> */}
+              <Route exact path="/user/forget_password" component={Forgetpassword} />
+              <Route exact path="/user/reset_password/" component={Resetpassword} />
               <Protected exact path="*" component={Error} />
 
 

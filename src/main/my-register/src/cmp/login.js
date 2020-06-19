@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
-
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import AuthService from "../services/auth.service";
 
 const required = value => {
@@ -106,7 +106,7 @@ export default class Login extends Component {
             }}
           >
             <div className="form-group">
-              <label htmlFor="email">Username</label>
+              {/* <label htmlFor="email">Email</label> */}
               <Input
                 type="text"
                 placeholder="email"
@@ -120,7 +120,7 @@ export default class Login extends Component {
             </div>
 
             <div className="form-group">
-              <label htmlFor="password">Password</label>
+              {/* <label htmlFor="password">Password</label> */}
               <Input
                 type={(isPasswordShown) ? "text" : "password"}
                 placeholder="password"
@@ -148,9 +148,11 @@ export default class Login extends Component {
                 )}
                 <span>Login</span>
               </button>
+              <p className="forgot-password text-right">
+                    <Link to={"/user/forget_password"}>Forgot password?</Link>
+                </p>
             </div>
-            <br />
-            <p>Not Registered Yet? <a href="/register" target="_self">Click Here</a></p>
+            <p>New User? <a href="/register" target="_self">Click Here</a></p>
 
             {this.state.message && (
               <div className="form-group">
@@ -166,6 +168,7 @@ export default class Login extends Component {
               }}
             />
           </Form>
+     
         </div>
       </div>
     );

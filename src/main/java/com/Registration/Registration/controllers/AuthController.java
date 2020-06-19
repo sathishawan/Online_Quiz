@@ -8,8 +8,11 @@ import com.Registration.Registration.response.JwtResponse;
 import com.Registration.Registration.response.MessageResponse;
 import com.Registration.Registration.security.jwt.JwtUtils;
 import com.Registration.Registration.security.services.UserDetailsImpl;
+import com.Registration.Registration.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -35,6 +38,9 @@ public class AuthController {
     UserRepository userRepository;
 
     @Autowired
+    public JavaMailSender javaMailSender;
+
+    @Autowired
     RoleRepository roleRepository;
 
     @Autowired
@@ -43,6 +49,10 @@ public class AuthController {
     @Autowired
     JwtUtils jwtUtils;
 
+    @Autowired
+    private UserService userService;
+
+    @CrossOrigin(origins = "*")
     @PostMapping("/signin")
     public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
 
@@ -69,35 +79,6 @@ public class AuthController {
     }
 
     @CrossOrigin(origins = "*")
-    @RequestMapping(value = "/get_roles", method = RequestMethod.GET)
-    public List<Role> get_roles() {
-        return roleRepository.findAll();
-    }
-
-    @CrossOrigin(origins = "*")
-    @RequestMapping(value = "/admin/user/list", method = RequestMethod.GET)
-    public List<User> adminUserList() {
-        return userRepository.findAll();
-    }
-
-    @CrossOrigin(origins = "*")
-    @RequestMapping(value = "/list/userById", method = RequestMethod.GET)
-    public List<User> listUserById(@RequestParam String id) {
-        return userRepository.findByid(id);
-    }
-
-    @CrossOrigin(origins = "*")
-    @RequestMapping(value = "/admin/userCount", method = RequestMethod.GET)
-    public long adminUserCount() {
-        return userRepository.count();
-    }
-
-    @CrossOrigin(origins = "*")
-    @DeleteMapping(value = "/admin/user/delete/{id}")
-    public void adminUserDelete(@PathVariable  String id) {
-        userRepository.deleteById(id);
-    }
-
     @PostMapping("/signup")
     public ResponseEntity<?> registerUser(@Valid @RequestBody SignupRequest signUpRequest) {
         if (userRepository.existsByUsername(signUpRequest.getUsername())) {
@@ -114,7 +95,7 @@ public class AuthController {
         // Create new user's account
         User user = new User(signUpRequest.getUsername(),
                 signUpRequest.getEmail(),
-                encoder.encode(signUpRequest.getPassword()));
+                encoder.encode(signUpRequest.getPassword()),signUpRequest.getToken(),signUpRequest.getTokenCreationDate());
 
         Set<String> strRoles = signUpRequest.getRoles();
         Set<Role> roles = new HashSet<>();
@@ -150,6 +131,59 @@ public class AuthController {
         userRepository.save(user);
 
         return ResponseEntity.ok(new MessageResponse("User registered successfully!"));
+    }
+
+    @CrossOrigin(origins = "*")
+    @PostMapping("/forgot-password")
+    public String forgotPassword(@RequestParam String email) {
+        User existingUser = userRepository.findByEmailIgnoreCase(email);
+
+        String response = userService.forgotPassword(email);
+
+        if (!response.startsWith("Invalid")) {
+            SimpleMailMessage message=new SimpleMailMessage();
+            message.setTo(existingUser.getEmail());
+            message.setSubject("Reset Password");
+            message.setText("To complete the password reset process,please click below link :\n\n" + "http://localhost:3000/user/reset_password?token=" + response);
+            javaMailSender.send(message);
+        }
+        return response;
+    }
+
+    @CrossOrigin(origins = "*")
+    @PutMapping("/reset-password")
+    public String resetPassword(@RequestParam String token,@RequestParam String password) {
+        return userService.resetPassword(token, encoder.encode(password));
+    }
+
+    @CrossOrigin(origins = "*")
+    @RequestMapping(value = "/get_roles", method = RequestMethod.GET)
+    public List<Role> get_roles() {
+        return roleRepository.findAll();
+    }
+
+    @CrossOrigin(origins = "*")
+    @RequestMapping(value = "/admin/user/list", method = RequestMethod.GET)
+    public List<User> adminUserList() {
+        return userRepository.findAll();
+    }
+
+    @CrossOrigin(origins = "*")
+    @RequestMapping(value = "/list/userById", method = RequestMethod.GET)
+    public List<User> listUserById(@RequestParam String id) {
+        return userRepository.findByid(id);
+    }
+
+    @CrossOrigin(origins = "*")
+    @RequestMapping(value = "/admin/userCount", method = RequestMethod.GET)
+    public long adminUserCount() {
+        return userRepository.count();
+    }
+
+    @CrossOrigin(origins = "*")
+    @DeleteMapping(value = "/admin/user/delete/{id}")
+    public void adminUserDelete(@PathVariable  String id) {
+        userRepository.deleteById(id);
     }
 
 }

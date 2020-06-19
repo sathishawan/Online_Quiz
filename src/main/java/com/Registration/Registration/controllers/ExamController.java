@@ -1,23 +1,17 @@
 package com.Registration.Registration.controllers;
 
 import com.Registration.Registration.models.Exam;
-import com.Registration.Registration.models.Question;
 import com.Registration.Registration.repository.ExamRepository;
 import com.Registration.Registration.repository.QuestionRepository;
 import com.Registration.Registration.response.MessageResponse;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
@@ -34,7 +28,7 @@ public class ExamController {
     @CrossOrigin(origins = "*")
     @RequestMapping(value = "/admin/exam/add", method = RequestMethod.POST)
     public ResponseEntity<?> adminExamAdd(@Valid @RequestBody Exam exam) {
-        exam.set_id(ObjectId.get());
+        exam.set_id(ObjectId.get().toHexString());
 
         if (exam.getExam_id() != "" && exam.getExam_name() != "")
         {
@@ -61,7 +55,7 @@ public class ExamController {
     @CrossOrigin(origins = "*")
     @RequestMapping(value = "/admin/exam/list", method = RequestMethod.GET)
     public List<Exam> adminExamList() {
-        return examRepository.findAll(Sort.by(Sort.Direction.ASC, "exam_name"));
+        return examRepository.findAll(Sort.by(Sort.Direction.DESC, "created_date"));
     }
 
 //    @CrossOrigin(origins = "*")
@@ -110,6 +104,13 @@ public class ExamController {
     public long adminExamCount() {
         return examRepository.count();
     }
+
+//    @CrossOrigin(origins = "*")
+//    @RequestMapping(value = "/user/examCount", method = RequestMethod.GET)
+//    public List<Exam> userExamCount() {
+//        return examRepository.userExamCount();
+//    }
+
 
     @CrossOrigin(origins = "*")
     @RequestMapping(value = "/get_exam", method = RequestMethod.GET)

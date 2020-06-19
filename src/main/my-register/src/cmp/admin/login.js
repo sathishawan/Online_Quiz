@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
-
 import AuthService from "../../services/auth.service";
 
 const required = value => {
@@ -107,10 +106,10 @@ export default class AdminLogin extends Component {
             }}
           >
             <div className="form-group">
-              <label htmlFor="username">Username</label>
+              {/* <label htmlFor="username">Username</label> */}
               <Input
                 type="text"
-                placeholder="username"
+                placeholder="email"
                 className="form-control"
                 name="username"
                 // autocomplete="off"
@@ -121,7 +120,7 @@ export default class AdminLogin extends Component {
             </div>
 
             <div className="form-group">
-              <label htmlFor="password">Password</label>
+              {/* <label htmlFor="password">Password</label> */}
               <Input
                 type = {(isPasswordShown) ? "text" : "password"}
                 placeholder="password"

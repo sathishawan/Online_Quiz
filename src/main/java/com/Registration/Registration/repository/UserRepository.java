@@ -9,10 +9,13 @@ import java.util.Optional;
 
 public interface UserRepository extends MongoRepository<User, String> {
 
-//    @Query(fields = "{username: 1, email: 1}")
+    @Query(fields = "{username: 1, email: 1, id: 0}")
     List<User> findByid(String id);
 
-    Optional<User> findByEmail(String email);
+    User findByToken(String token);
+
+    @Query(value = "{'email' : { $regex : ?0, $options: 'i' } }")
+    User findByEmailIgnoreCase(String email);
 
     Boolean existsByUsername(String username);
 

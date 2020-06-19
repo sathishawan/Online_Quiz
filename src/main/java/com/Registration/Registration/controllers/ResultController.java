@@ -29,7 +29,7 @@ public class ResultController {
     @CrossOrigin(origins = "*")
     @RequestMapping(value = "/admin/result/list", method = RequestMethod.GET)
     public List<Result> adminResultList() {
-        return resultRepository.findAll();
+        return resultRepository.findAll(Sort.by(Sort.Direction.DESC, "exam_date"));
     }
 
     @CrossOrigin(origins = "*")
@@ -52,7 +52,7 @@ public class ResultController {
 
     @CrossOrigin(origins = "*")
     @DeleteMapping(value = "/admin/result/delete/{id}")
-    public void adminResultDelete(@PathVariable  String id) {
+    public void adminResultDelete(@PathVariable String id) {
         resultRepository.deleteById(id);
     }
 
@@ -61,7 +61,6 @@ public class ResultController {
     public long adminResultCount() {
         return resultRepository.count();
     }
-
 
 
 }

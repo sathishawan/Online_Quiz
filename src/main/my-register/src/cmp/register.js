@@ -144,6 +144,7 @@ export default class Register extends Component {
     return (
       <div className="col-md-12">
         <div className="card card-container">
+        <h3 className="user"><b>Sign Up</b></h3>
           <img
             src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
             alt="profile-img"
@@ -159,10 +160,10 @@ export default class Register extends Component {
             {!this.state.successful && (
               <div>
                 <div className="form-group">
-                  <label htmlFor="username">Username</label>
+                  {/* <label htmlFor="Full Name">Full Name</label> */}
                   <Input
                     type="text"
-                    placeholder="username"
+                    placeholder="Full Name"
                     className="form-control"
                     name="username"
                     value={this.state.username}
@@ -172,7 +173,7 @@ export default class Register extends Component {
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="email">Email</label>
+                  {/* <label htmlFor="email">Email</label> */}
                   <Input
                     type="text"
                     placeholder="email"
@@ -185,7 +186,7 @@ export default class Register extends Component {
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="password">Password</label>
+                  {/* <label htmlFor="password">Password</label> */}
                   <Input
                     type = {(isPasswordShown) ? "text" : "password"}
                     placeholder="password"
@@ -216,7 +217,7 @@ export default class Register extends Component {
                 <div className="form-group">
                   <button className="btn btn-primary btn-block">Sign Up</button>
                 </div>
-                <br/>
+                
                 <p>Already Registered? <a href="/login" target="_self">Login</a></p>
 
               </div>

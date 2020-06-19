@@ -7,6 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
+import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -29,16 +30,25 @@ public class User {
     @Size(max = 120)
     private String password;
 
+    private String token;
+
+    private LocalDateTime tokenCreationDate;
+
     @DBRef
     private Set<Role> roles = new HashSet<>();
 
     public User() {
     }
 
-    public User(String username, String email, String password) {
+    public User(String username, String email, String password, String token, LocalDateTime tokenCreationDate) {
         this.username = username;
         this.email = email;
         this.password = password;
+        this.token = token;
+        this.tokenCreationDate = tokenCreationDate;
+    }
+
+    public User(String username, String email, String encode) {
     }
 
     public String getId() {
@@ -79,5 +89,21 @@ public class User {
 
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+    public LocalDateTime getTokenCreationDate() {
+        return tokenCreationDate;
+    }
+
+    public void setTokenCreationDate(LocalDateTime tokenCreationDate) {
+        this.tokenCreationDate = tokenCreationDate;
     }
 }
