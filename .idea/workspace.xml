@@ -107,6 +107,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="488" y="57" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1593671514572" />
+    <state x="534" y="254" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1593773514931">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="534" y="254" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1366.728@0.0.1366.728" timestamp="1593773514931" />
     <state x="484" y="233" width="436" height="266" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1588087040528">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -123,22 +127,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="122" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1586664726956" />
-    <state width="1323" height="121" key="GridCell.Tab.0.bottom" timestamp="1593762158725">
+    <state width="1350" height="250" key="GridCell.Tab.0.bottom" timestamp="1593773647353">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="121" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1593762158725" />
-    <state width="1323" height="121" key="GridCell.Tab.0.center" timestamp="1593762158725">
+    <state width="1350" height="250" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1593773647353" />
+    <state width="1350" height="250" key="GridCell.Tab.0.center" timestamp="1593773647352">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="121" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1593762158725" />
-    <state width="1323" height="121" key="GridCell.Tab.0.left" timestamp="1593762158725">
+    <state width="1350" height="250" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1593773647352" />
+    <state width="1350" height="250" key="GridCell.Tab.0.left" timestamp="1593773647352">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="121" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1593762158725" />
-    <state width="1323" height="121" key="GridCell.Tab.0.right" timestamp="1593762158725">
+    <state width="1350" height="250" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1593773647352" />
+    <state width="1350" height="250" key="GridCell.Tab.0.right" timestamp="1593773647352">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="121" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1593762158725" />
+    <state width="1350" height="250" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1593773647352" />
     <state width="1323" height="97" key="GridCell.Tab.1.bottom" timestamp="1588100216968">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -205,7 +209,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/Registration/Registration/controllers/AuthController.java</url>
-          <line>118</line>
+          <line>119</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
