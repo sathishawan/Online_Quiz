@@ -66,6 +66,7 @@ public class AuthController {
                 new UsernamePasswordAuthenticationToken(
 
                         loginRequest.getEmail(),
+
                         loginRequest.getPassword()
                 )
         );

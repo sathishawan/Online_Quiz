@@ -44,26 +44,33 @@ class AdminQuestionList extends Component {
 
   deleteExam(id) {
     console.log(id)
-    if (window.confirm('Are you sure you want to delete?')) {
-      const { users } = this.state;
-      axios.delete(API_URL + 'admin/question/delete/' + id).then(result => {
-        console.log(result);
+          const { users } = this.state;
+        
         swal({
-          title: "Done!",
-          text: "Deleted Successfully",
-          icon: "success",
-          timer: 2000,
-          button: false,
+          title: "Are you sure?",
+        text: "Are you sure you want to delete??",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
         })
-        this.setState({
-          response: result,
-          users: users.filter(user => user._id !== id),
-          alert_message: "success",
-        });
-      });
-    }
+        .then(willDelete => {
+          if (willDelete) {
+            axios.delete(API_URL + 'admin/question/delete/' + id).then(result => {
+              
+                swal({
+                  title: "Done!",
+                  text: "Deleted Successfully",
+                  icon: "success",
+                  timer: 2000,
+                  button: false
+                });
+                window.location.reload()
+               
+        })
+      }
+    });
   }
-
+    
   onAdd = () => {
     this.props.history.push("/admin/question/add")
   }

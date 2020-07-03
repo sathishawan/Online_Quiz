@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import $ from "jquery";
+import swal from 'sweetalert';
+
 import { Modal, Button } from 'react-bootstrap'
 import AuthService from "../../../services/auth.service.js";
 const API_URL = 'http://localhost:8080/api/auth/';
@@ -145,7 +147,16 @@ export default class Selectexam extends Component {
 
     onSubmit = (e) => {
         e && e.preventDefault();
+        swal({
+            title: "Are you sure?",
+          text: "Are you sure you want to Exit??",
+          buttons: true,
+          success: true,
+          })
+          .then(willExit => {
+            if (willExit) {
         var question_length = this.state.users.length;
+        
         this.state.users.map(question => {
             if (question.answer === this.state.selectedOption[question._id]) {
                 correctCount += 1;
@@ -198,9 +209,23 @@ export default class Selectexam extends Component {
                 console.log(data);
             })
         })
+        
+    }
+})
     }
 
-    changeHandler = (e) => {
+        //   this.setState({
+            
+        //     users: users.filter(user => user._id !== id),
+        //     alert_message: "success",
+        // users:window.location.reload()
+  
+        //   })
+        
+      
+      
+
+ changeHandler = (e) => {
         const name = e.target.name;
         const value = e.target.value;
         this.setState({
