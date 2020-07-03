@@ -249,6 +249,7 @@ public class AuthController {
     public @Valid Rating add(@Valid @RequestBody Rating rating) {
         rating.set_id(ObjectId.get().toHexString());
         ratingRepository.save(rating);
+
         return rating;
     }
 
