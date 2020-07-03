@@ -1,44 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="17c24ee1-1d26-4109-8057-9bf1e7993a5b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/controllers/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/controllers/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/controllers/ExamController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/controllers/ExamController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/controllers/QuestionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/controllers/QuestionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/models/Rating.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/models/Rating.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/repository/QuestionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/repository/QuestionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/repository/RatingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/repository/RatingRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/request/SignupRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/request/SignupRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/security/services/UserDetailsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/security/services/UserDetailsImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/my-register/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/my-register/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/my-register/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/my-register/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/my-register/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/my-register/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/my-register/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/my-register/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/my-register/src/cmp/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/my-register/src/cmp/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/my-register/src/cmp/admin/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/my-register/src/cmp/admin/dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/my-register/src/cmp/admin/exam/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/my-register/src/cmp/admin/exam/list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/my-register/src/cmp/admin/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/my-register/src/cmp/admin/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/my-register/src/cmp/admin/result/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/my-register/src/cmp/admin/result/list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/my-register/src/cmp/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/my-register/src/cmp/profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/my-register/src/cmp/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/my-register/src/cmp/register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/my-register/src/cmp/user/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/my-register/src/cmp/user/dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/my-register/src/cmp/user/exam/result.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/my-register/src/cmp/user/exam/result.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/my-register/src/cmp/user/exam/star.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/my-register/src/cmp/user/exam/star.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/my-register/src/cmp/user/exam/try.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/my-register/src/cmp/user/exam/try.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/my-register/src/services/auth.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/my-register/src/services/auth.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Registration/Registration/controllers/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Registration/Registration/controllers/AuthController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Registration/Registration/controllers/QuestionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Registration/Registration/controllers/QuestionController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Registration/Registration/models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Registration/Registration/models/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Registration/Registration/repository/QuestionRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Registration/Registration/repository/QuestionRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Registration/Registration/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Registration/Registration/repository/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Registration/Registration/request/SignupRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Registration/Registration/request/SignupRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Registration/Registration/security/services/UserDetailsImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Registration/Registration/security/services/UserDetailsImpl.class" afterDir="false" />
-    </list>
+    <list default="true" id="17c24ee1-1d26-4109-8057-9bf1e7993a5b" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
