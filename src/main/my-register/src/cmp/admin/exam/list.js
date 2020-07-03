@@ -114,7 +114,7 @@ class AdminExamList extends Component {
   }
 
   render() {
-    const { users, currentPage, usersPerPage } = this.state;
+    const { users, currentPage, usersPerPage,count } = this.state;
     const lastIndex = currentPage * usersPerPage;
     const firstIndex = lastIndex - usersPerPage;
     const currentUsers = users.slice(firstIndex, lastIndex);
@@ -158,7 +158,7 @@ class AdminExamList extends Component {
                 <th>Exam Time</th>
                 <th>Duration <b style={{ color: "#F6F700" }}>(hh:mm)</b></th>
                 <th>Total Questions</th>
-                <th>Total Marks</th>
+                {/* <th>Total Marks</th> */}
                 <th>Action</th>
               </tr>
             </thead>
@@ -175,8 +175,9 @@ class AdminExamList extends Component {
                     <td>{users.exam_date}</td>
                     <td>{users.exam_time}</td>
                     <td>{users.duration}</td>
+                    {}
                     <td></td>
-                    <td></td>
+                    {/* <td></td> */}
                     <td>
                       <Link to={"/admin/exam/edit/" + users._id} title="Edit" ><i className="fa fa-edit" style={{ fontSize: 20, color: "DodgerBlue", }}></i></Link>  &nbsp; &nbsp; &nbsp;
                     <i className="fa fa-trash-o" title="Delete" onClick={() => this.deleteExam(users._id)} style={{ fontSize: 20, color: "red", }}></i>

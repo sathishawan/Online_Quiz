@@ -19,7 +19,7 @@ export default class AdminDashboard extends Component {
 
     componentDidMount() {
 
-        axios.get(API_URL + 'admin/userCount', { headers: {'Authorization': 'application/json'}})
+        axios.get(API_URL + 'admin/userCount', { headers: { 'Authorization': 'application/json' } })
             .then(res => {
                 const usercount = res.data;
                 this.setState({ usercount });
@@ -40,7 +40,7 @@ export default class AdminDashboard extends Component {
                 // console.log('Total' + count)
             })
 
-            axios.get(API_URL + 'admin/resultCount')
+        axios.get(API_URL + 'admin/resultCount')
             .then(res => {
                 const resultCount = res.data;
                 this.setState({ resultCount });
@@ -58,7 +58,8 @@ export default class AdminDashboard extends Component {
         this.props.history.push('/admin/question/index');
     }
     onResult = () => {
-        this.props.history.push('/admin/result/list');    }
+        this.props.history.push('/admin/result/list');
+    }
 
 
     render() {

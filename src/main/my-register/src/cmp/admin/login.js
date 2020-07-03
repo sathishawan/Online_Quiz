@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import AuthService from "../../services/auth.service";
 
 const required = value => {
@@ -148,6 +149,9 @@ export default class AdminLogin extends Component {
                 )}
                 <span>Login</span>
               </button>
+              <p className="forgot-password text-right">
+                    <Link to={"/user/forget_password"}>Forgot password?</Link>
+                </p>
             </div>
             <br/>
                 {/* <p>Don't have an account? <a href="/register" target="_self">Sign Up</a></p> */}

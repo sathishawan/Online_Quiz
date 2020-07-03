@@ -6,8 +6,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStepBackward, faFastBackward, faStepForward, faFastForward } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 import swal from 'sweetalert';
-import html2canvas from 'html2canvas'
-import jsPDF from 'jspdf'
+// import html2canvas from 'html2canvas'
+// import jsPDF from 'jspdf'
 const API_URL = 'http://localhost:8080/api/auth/';
 
 class UserExamResult extends Component {
@@ -32,7 +32,7 @@ class UserExamResult extends Component {
             isLoaded: true,
             users: result
           });
-          console.log(result.length)
+          // console.log(result.length)
         })
   }
 
@@ -109,22 +109,22 @@ class UserExamResult extends Component {
     document.body.innerHTML = oldPage
 }
 
-printDocument= () => {  
-  const input = document.getElementById('printableId');  
-  html2canvas(input)  
-    .then((canvas) => {  
-      var imgWidth = 200;  
-      var pageHeight = 290;  
-      var imgHeight = canvas.height * imgWidth / canvas.width;  
-      var heightLeft = imgHeight;  
-      const imgData = canvas.toDataURL('image/png');  
-      const pdf = new jsPDF('p', 'mm', 'a4')  
-      var position = 0;  
-      var heightLeft = imgHeight;  
-      pdf.addImage(imgData, 'JPEG', 0, position, imgWidth, imgHeight);  
-      pdf.save("download.pdf");  
-    });  
-}  
+// pdfDocument= () => {  
+//   const input = document.getElementById('printableId');  
+//   html2canvas(input)  
+//     .then((canvas) => {  
+//       var imgWidth = 200;  
+//       var pageHeight = 290;  
+//       var imgHeight = canvas.height * imgWidth / canvas.width;  
+//       var heightLeft = imgHeight;  
+//       const imgData = canvas.toDataURL('image/png');  
+//       const pdf = new jsPDF('p', 'mm', 'a4')  
+//       var position = 0;  
+//       var heightLeft = imgHeight;  
+//       pdf.addImage(imgData, 'JPEG', 0, position, imgWidth, imgHeight);  
+//       pdf.save("download.pdf");  
+//     });  
+// }  
 
 
 
@@ -151,7 +151,7 @@ printDocument= () => {
 
           <input style={{ float: "left" }} value={term} type="text" className="form-control col-md-3" onChange={this.searchHandler} placeholder="Search..." />
           <button style={{float:"right"}} class="btn btn-outline-primary btn-circle btn-circle-sm m-1" title="print" onClick={() => this.printOrder()}><i class="fa fa-print fa-lg"></i></button>          
-          <button style={{float:"right"}} class="btn btn-outline-danger btn-circle btn-circle-sm m-1" title="pdf" onClick={() => this.printDocument()}><i class="fa fa-file-pdf-o fa-lg"></i></button>
+          <button style={{float:"right"}} class="btn btn-outline-danger btn-circle btn-circle-sm m-1" title="pdf"><i class="fa fa-file-pdf-o fa-lg"></i></button>
           <div id="printableId">
           <table  className="table table-bordered table-hover">
             <thead>

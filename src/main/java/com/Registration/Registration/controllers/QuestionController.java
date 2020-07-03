@@ -108,8 +108,14 @@ public class QuestionController<exam_name> {
     }
 
     @CrossOrigin(origins = "*")
+    @RequestMapping(value = "/user/examlistcount", method = RequestMethod.GET)
+    public int userExamlistCount() {
+        return questionRepository.userExamlistCount().size();
+    }
+
+    @CrossOrigin(origins = "*")
     @RequestMapping(value = "/examlist", method = RequestMethod.GET)
-    public List<Question> questionList() {
+    public List<Question> examlist() {
         return questionRepository.examlist();
     }
 

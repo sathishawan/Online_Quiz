@@ -71,7 +71,7 @@ public class ExamController {
     @CrossOrigin(origins = "*")
     @RequestMapping( value="/admin/exam/edit/{_id}",method= RequestMethod.PUT)
     public Exam adminExamEdit(@PathVariable String _id, @RequestBody Exam exam) {
-        Optional<Exam> opemployee = examRepository.findById(_id);
+            Optional<Exam> opemployee = examRepository.findById(_id);
         Exam e = opemployee.get();
         if(exam.getExam_id() != null)
             e.setExam_id(exam.getExam_id());

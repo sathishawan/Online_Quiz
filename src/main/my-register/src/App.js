@@ -4,6 +4,7 @@ import "./App.css";
 import AuthService from "./services/auth.service";
 import Home from "./cmp/Home";
 import Profile from "./cmp/profile";
+import EditProfile from "./cmp/editprofile"
 import Register from "./cmp/register";
 import Login from "./cmp/login";
 
@@ -32,6 +33,9 @@ import Forgetpassword from "./cmp/Forgetpassword";
 import Resetpassword from "./cmp/Resetpassword"
 import Protected from "./cmp/Protected"
 import Error from "./cmp/Error";
+// import Rating from "./cmp/user/exam/rating";
+import Star from "./cmp/user/exam/star";
+
 
 class App extends Component {
   constructor(props) {
@@ -42,12 +46,13 @@ class App extends Component {
       showUserBoard: false,
       showAdminBoard: false,
       currentUser: undefined,
+     count:0
     };
   }
 
   componentDidMount() {
     const user = AuthService.getCurrentUser();
-    console.log(user)
+    // console.log(user.accessToken)
 
     if (user) {
       this.setState({
@@ -65,7 +70,7 @@ class App extends Component {
   }
 
   render() {
-    const { currentUser, showAdminBoard, showUserBoard } = this.state;
+    const { currentUser, showAdminBoard, showUserBoard,count } = this.state;
 
     return (
       <Router>
@@ -128,6 +133,13 @@ class App extends Component {
 
             {currentUser ? (
               <div className="navbar-nav ml-auto">
+                {showAdminBoard && (
+                <li className="nav-item">
+                  <Link style={{ color: "yellow" }} title="Notification" to={"/"} className="nav-link active">
+                <i style={{ color: "yellow" }} className="fa fa-bell-o"><span class="badge">{count}</span></i>
+                  </Link>
+                </li>
+              )}
                 <li className="nav-item">
                   <Link style={{ color: "yellow" }} title={currentUser.username} to={"/profile"} className="nav-link active">
                     <i class="fa fa-user-circle" aria-hidden="true"></i> Hi, {currentUser.username}
@@ -183,9 +195,12 @@ class App extends Component {
               <Route exact path="/user/login" component={Login} />
               <Route exact path="/register" component={Register} />
               <Protected exact path="/profile" component={Profile} />
+              <Protected exact path="/profile/edit/:id" component={EditProfile} />
               <Route exact path="/dashboard/index" component={UserDashboard} />
               <Protected exact path="/exam/list" component={UserExamList} />
               <Protected exact path="/exam/try" component={UserExamTry} />
+              {/* <Protected exact path="/exam/rating" component={Rating} /> */}
+              <Protected exact path="/exam/star" component={Star} />
               <Protected exact path="/result/list" component={UserExamResult} />
               <Route exact path="/user/forget_password" component={Forgetpassword} />
               <Route exact path="/user/reset_password/" component={Resetpassword} />

@@ -46,6 +46,17 @@ const vpassword = value => {
   }
 };
 
+const phone = value => {
+  if (value.length < 10 || value.length > 10) {
+    return (
+      <div className="alert alert-danger" role="alert">
+        The phone number must be exactly 10 digits.
+      </div>
+    );
+  }
+};
+
+
 export default class Register extends Component {
   constructor(props) {
     super(props);
@@ -53,9 +64,13 @@ export default class Register extends Component {
     this.onChangeUsername = this.onChangeUsername.bind(this);
     this.onChangeEmail = this.onChangeEmail.bind(this);
     this.onChangePassword = this.onChangePassword.bind(this);
+    this.onChangePhone = this.onChangePhone.bind(this);
+    this.onChangeBirth=this.onChangeBirth.bind(this);
 
     this.state = {
       username: "",
+      phone:"",
+      birth:"",
       email: "",
       password: "",
       successful: false,
@@ -67,15 +82,27 @@ export default class Register extends Component {
     };
   }
 
-  componentDidMount(){
-    fetch('http://localhost:8080/api/auth/get_roles')
-    .then(response => response.json())
-    .then(Roles => this.setState({Roles:Roles}))
-}
+//   componentDidMount(){
+//     fetch('http://localhost:8080/api/auth/get_roles')
+//     .then(response => response.json())
+//     .then(Roles => this.setState({Roles:Roles}))
+// }
 
   onChangeUsername(e) {
     this.setState({
       username: e.target.value
+    });
+  }
+
+  onChangePhone(e){
+    this.setState({
+      phone: e.target.value
+    });
+  }
+
+  onChangeBirth(e) {
+    this.setState({
+      birth: e.target.value
     });
   }
 
@@ -104,6 +131,8 @@ export default class Register extends Component {
     if (this.checkBtn.context._errors.length === 0) {
       AuthService.register(
         this.state.username,
+        this.state.phone,
+        this.state.birth,
         this.state.email,
         this.state.password
       ).then(
@@ -145,11 +174,11 @@ export default class Register extends Component {
       <div className="col-md-12">
         <div className="card card-container">
         <h3 className="user"><b>Sign Up</b></h3>
-          <img
+          {/* <img
             src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
             alt="profile-img"
             className="profile-img-card"
-          />
+          /> */}
 
           <Form
             onSubmit={this.handleRegister}
@@ -163,7 +192,7 @@ export default class Register extends Component {
                   {/* <label htmlFor="Full Name">Full Name</label> */}
                   <Input
                     type="text"
-                    placeholder="Full Name"
+                    placeholder="User Name"
                     className="form-control"
                     name="username"
                     value={this.state.username}
@@ -171,11 +200,36 @@ export default class Register extends Component {
                     validations={[required, vusername]}
                   />
                 </div>
+                <div className="form-group">
+                  {/* <label htmlFor="email">Email</label> */}
+                  <Input
+                    type="number"
+                    placeholder="Phone Number"
+                    className="form-control"
+                    name="phone"
+                    value={this.state.phone}
+                    onChange={this.onChangePhone}
+                    validations={[required, phone]}
+                  />
+                </div>
 
                 <div className="form-group">
                   {/* <label htmlFor="email">Email</label> */}
                   <Input
-                    type="text"
+                    type="date"
+                    placeholder="D.O.B"
+                    className="form-control"
+                    name="birth"
+                    value={this.state.birth}
+                    onChange={this.onChangeBirth}
+                    validations={[required]}
+                  />
+                </div>
+
+                <div className="form-group">
+                  {/* <label htmlFor="email">Email</label> */}
+                  <Input
+                    type="email"
                     placeholder="email"
                     className="form-control"
                     name="email"

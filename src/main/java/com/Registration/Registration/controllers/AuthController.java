@@ -9,7 +9,9 @@ import com.Registration.Registration.response.MessageResponse;
 import com.Registration.Registration.security.jwt.JwtUtils;
 import com.Registration.Registration.security.services.UserDetailsImpl;
 import com.Registration.Registration.service.UserService;
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
@@ -23,6 +25,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -42,6 +45,9 @@ public class AuthController {
 
     @Autowired
     RoleRepository roleRepository;
+
+    @Autowired
+    RatingRepository ratingRepository;
 
     @Autowired
     PasswordEncoder encoder;
@@ -92,10 +98,16 @@ public class AuthController {
                     .badRequest()
                     .body(new MessageResponse("Error: Email is already in use!"));
         }
+
+        if (userRepository.existsByPhone(signUpRequest.getPhone())) {
+            return ResponseEntity
+                    .badRequest()
+                    .body(new MessageResponse("Error: Phone is already in use!"));
+        }
         // Create new user's account
         User user = new User(signUpRequest.getUsername(),
                 signUpRequest.getEmail(),
-                encoder.encode(signUpRequest.getPassword()),signUpRequest.getToken(),signUpRequest.getTokenCreationDate());
+                encoder.encode(signUpRequest.getPassword()),signUpRequest.getPhone(),signUpRequest.getBirth() ,signUpRequest.getToken(),signUpRequest.getTokenCreationDate());
 
         Set<String> strRoles = signUpRequest.getRoles();
         Set<Role> roles = new HashSet<>();
@@ -131,6 +143,52 @@ public class AuthController {
         userRepository.save(user);
 
         return ResponseEntity.ok(new MessageResponse("User registered successfully!"));
+    }
+
+    @CrossOrigin(origins = "*")
+    @RequestMapping(value = "/user/getById", method = RequestMethod.GET)
+    public Optional<User> userGetById(@RequestParam String id) {
+        return userRepository.findById(id);
+    }
+
+    @RequestMapping( value="/user/editById/{id}",method= RequestMethod.PUT)
+    public ResponseEntity<?> userEditById(@Valid @PathVariable String id, @RequestBody User signUpRequest) {
+
+        Optional<User> employee = userRepository.findById(id);
+        if (!employee.isPresent()) {
+            return ResponseEntity.notFound().build();
+        }
+
+        User e = employee.get();
+
+        if (userRepository.existsByUsername(signUpRequest.getUsername()) && !e.getUsername().equals(signUpRequest.getUsername())) {
+            return ResponseEntity
+                    .badRequest()
+                    .body(new MessageResponse("Error: Username is already taken!"));
+        }
+
+        if (userRepository.existsByEmail(signUpRequest.getEmail()) && !e.getEmail().equals(signUpRequest.getEmail())) {
+            return ResponseEntity
+                    .badRequest()
+                    .body(new MessageResponse("Error: Email is already in use!"));
+        }
+
+        if (userRepository.existsByPhone(signUpRequest.getPhone()) && !e.getPhone().equals(signUpRequest.getPhone())) {
+            return ResponseEntity
+                    .badRequest()
+                    .body(new MessageResponse("Error: Phone is already in use!"));
+        }
+
+        if (signUpRequest.getUsername() != null)
+            e.setUsername(signUpRequest.getUsername());
+        if (signUpRequest.getEmail() != null)
+            e.setEmail(signUpRequest.getEmail());
+        if (signUpRequest.getPhone() != null)
+            e.setPhone(signUpRequest.getPhone());
+        if (signUpRequest.getBirth() != null)
+            e.setBirth(signUpRequest.getBirth());
+        userRepository.save(e);
+        return ResponseEntity.ok(new MessageResponse("Profile Updated successfully!"));
     }
 
     @CrossOrigin(origins = "*")
@@ -184,6 +242,14 @@ public class AuthController {
     @DeleteMapping(value = "/admin/user/delete/{id}")
     public void adminUserDelete(@PathVariable  String id) {
         userRepository.deleteById(id);
+    }
+
+    @CrossOrigin(origins = "*")
+    @RequestMapping(value = "/user/rating", method = RequestMethod.POST)
+    public @Valid Rating add(@Valid @RequestBody Rating rating) {
+        rating.set_id(ObjectId.get().toHexString());
+        ratingRepository.save(rating);
+        return rating;
     }
 
 }

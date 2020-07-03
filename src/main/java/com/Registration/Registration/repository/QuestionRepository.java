@@ -12,7 +12,7 @@ public interface QuestionRepository extends MongoRepository<Question, String> {
 
     Question findBy_id(Object _id);
 
-    @Aggregation("{'$group':{_id :'$exam_name', total_Questions : {$sum : 1 }, total_marks : {$sum: '$mark'}}}")
+    @Aggregation(value = "{'$group':{_id :'$exam_name', total_Questions : {$sum : 1 }, total_marks : {$sum: '$mark'}}}")
     List<Question> countByQuestionsAndMarks();
 
     @Aggregation("{'$group':{_id :'$exam_name'}}")
@@ -20,6 +20,9 @@ public interface QuestionRepository extends MongoRepository<Question, String> {
 
     @Aggregation(pipeline = {"{ $match : { exam_name : ?0 } }", "{ $sample : { size: 10 } }"})
     List<Question> userSelectExam(String exam_name);
+
+    @Aggregation(value = "{'$group':{_id :'$exam_name'}}")
+    List<Question> userExamlistCount();
 
     @Aggregation(value = "{'$group':{_id :'$exam_name'}}")
     List<Question> examlist();

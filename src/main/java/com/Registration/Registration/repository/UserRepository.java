@@ -9,6 +9,8 @@ import java.util.Optional;
 
 public interface UserRepository extends MongoRepository<User, String> {
 
+    Optional<User> findById(String id);
+
     @Query(fields = "{username: 1, email: 1, id: 0}")
     List<User> findByid(String id);
 
@@ -20,4 +22,6 @@ public interface UserRepository extends MongoRepository<User, String> {
     Boolean existsByUsername(String username);
 
     Boolean existsByEmail(String email);
+
+    Boolean existsByPhone(String phone);
 }

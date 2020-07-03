@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStepBackward, faFastBackward, faStepForward, faFastForward } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 import swal from 'sweetalert';
+// import html2canvas from 'html2canvas'
+// import jsPDF from 'jspdf'
 const API_URL = 'http://localhost:8080/api/auth/';
 
 
@@ -99,6 +101,33 @@ class AdminMarkView extends Component {
 
   };
 
+  printOrder = () => {
+    const printableElements = document.getElementById('printableId').innerHTML;
+    const orderHtml = '<html><head><title></title></head><body>' + printableElements + '</body></html>'
+    const oldPage = document.body.innerHTML;
+    document.body.innerHTML = orderHtml;
+    window.print();
+    document.body.innerHTML = oldPage
+}
+
+// pdfDocument= () => {  
+//   const input = document.getElementById('printableId');  
+//   html2canvas(input)  
+//     .then((canvas) => {  
+//       var imgWidth = 200;  
+//       var pageHeight = 290;  
+//       var imgHeight = canvas.height * imgWidth / canvas.width;  
+//       var heightLeft = imgHeight;  
+//       const imgData = canvas.toDataURL('image/png');  
+//       const pdf = new jsPDF('p', 'mm', 'a4')  
+//       var position = 0;  
+//       var heightLeft = imgHeight;  
+//       pdf.addImage(imgData, 'JPEG', 0, position, imgWidth, imgHeight);  
+//       pdf.save("download.pdf");  
+//     });  
+// }  
+
+
   render() {
     const { users, term, currentPage, usersPerPage } = this.state;
     const lastIndex = currentPage * usersPerPage;
@@ -121,8 +150,10 @@ class AdminMarkView extends Component {
         <div className="jumbotron" style={{ padding: 20, overflow: "auto" }}>
 
           {/* <button  style={{borderRadius:"10px"}} type="button" title="Add Exam" className="btn btn-success" onClick={this.onAdd}><i className="fa fa-plus"></i> Add Exam</button> */}
-          <input style={{ float: "right" }} value={term} type="text" className="form-control col-md-3" onChange={this.searchHandler} placeholder="Search..." />
-          <br /><br />
+          <input style={{ float: "left" }} value={term} type="text" className="form-control col-md-3" onChange={this.searchHandler} placeholder="Search..." />
+          <button style={{float:"right"}} class="btn btn-outline-primary btn-circle btn-circle-sm m-1" title="print" onClick={() => this.printOrder()}><i class="fa fa-print fa-lg"></i></button>          
+          <button style={{float:"right"}} class="btn btn-outline-danger btn-circle btn-circle-sm m-1" title="pdf" ><i class="fa fa-file-pdf-o fa-lg"></i></button>          <br /><br />
+          <div id="printableId">
           <table className="table table-bordered table-hover">
             <thead>
               <th colspan="10" class="colspan"><FontAwesomeIcon icon={faList} /> Result List</th>
@@ -167,6 +198,7 @@ class AdminMarkView extends Component {
               }
             </tbody>
           </table>
+          </div>
         </div>
 
         {users.length > 0 ?

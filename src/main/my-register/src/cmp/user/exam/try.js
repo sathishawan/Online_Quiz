@@ -210,7 +210,7 @@ export default class Selectexam extends Component {
     onClose = () => {
         // this.props.history.push('/exam/list');
         this.setState({ modal: !this.state.modal });
-        this.props.history.push('/dashboard/index');
+        this.props.history.push('/exam/star');
         window.location.reload();
 
     }
@@ -566,7 +566,7 @@ export default class Selectexam extends Component {
                                             <h4 style={{ color: "#7C0000" }}>Overall Percentage <i class="fa fa-percent" aria-hidden="true"></i></h4>
                                         </div>
                                         <div class="float-right">
-                                            <h4 class="text-right" style={{ color: "#7C0000" }}><b>{Average}</b> </h4>
+                                            <h4 class="text-right" style={{ color: "#7C0000" }}><b>{Average.toFixed(2)}</b> </h4>
                                         </div>
                                     </div>
 

@@ -16,7 +16,7 @@ export default class UserDashboard extends Component {
 
     componentDidMount() {
 
-        axios.get(API_URL + 'admin/examCount')
+        axios.get(API_URL + 'user/examlistcount')
             .then(res => {
                 const examcount = res.data;
                 this.setState({ examcount });
@@ -46,7 +46,7 @@ export default class UserDashboard extends Component {
     }
 
     render() {
-        console.log(this.state.resultCount.length)
+        // console.log(this.state.resultCount.length)
 
         const { resultCount } = this.state;
         const total_results = 0;

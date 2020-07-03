@@ -1,9 +1,14 @@
 package com.Registration.Registration.request;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.hibernate.validator.constraints.Length;
+import org.springframework.format.annotation.NumberFormat;
+
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.Set;
 
 public class SignupRequest {
@@ -11,6 +16,14 @@ public class SignupRequest {
     @NotBlank
     @Size(min = 3, max = 20)
     private String username;
+
+    @NotBlank
+    @Size(max=10,min=10)
+    private String phone;
+
+    @JsonFormat(pattern="dd-MM-yyyy")
+    @NotBlank
+    private String birth;
 
     @NotBlank
     @Size(max = 50)
@@ -41,6 +54,22 @@ public class SignupRequest {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getBirth() {
+        return birth;
+    }
+
+    public void setBirth(String birth) {
+        this.birth = birth;
     }
 
     public String getPassword() {

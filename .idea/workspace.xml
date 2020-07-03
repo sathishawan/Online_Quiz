@@ -2,168 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17c24ee1-1d26-4109-8057-9bf1e7993a5b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/App.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/java/com/Registration/Registration/RegistrationApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/java/com/Registration/Registration/controllers/AuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/java/com/Registration/Registration/controllers/ExamController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/java/com/Registration/Registration/controllers/QuestionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/java/com/Registration/Registration/controllers/ResultController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/java/com/Registration/Registration/controllers/TestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/java/com/Registration/Registration/models/ERole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/java/com/Registration/Registration/models/Exam.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/java/com/Registration/Registration/models/Question.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/java/com/Registration/Registration/models/Result.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/java/com/Registration/Registration/models/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/java/com/Registration/Registration/models/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/java/com/Registration/Registration/repository/ExamRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/java/com/Registration/Registration/repository/QuestionRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/java/com/Registration/Registration/repository/ResultRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/java/com/Registration/Registration/repository/RoleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/java/com/Registration/Registration/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/java/com/Registration/Registration/request/LoginRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/java/com/Registration/Registration/request/SignupRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/java/com/Registration/Registration/response/JwtResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/java/com/Registration/Registration/response/MessageResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/java/com/Registration/Registration/security/WebSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/java/com/Registration/Registration/security/jwt/AuthEntryPointJwt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/java/com/Registration/Registration/security/jwt/AuthTokenFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/java/com/Registration/Registration/security/jwt/JwtUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/java/com/Registration/Registration/security/services/ExamResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/java/com/Registration/Registration/security/services/ExamService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/java/com/Registration/Registration/security/services/ExamServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/java/com/Registration/Registration/security/services/UserDetailsImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/java/com/Registration/Registration/security/services/UserDetailsServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/debug.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/public/logo192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/public/logo512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/App.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/awan.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/cmp.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/cmp/About.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/cmp/AddExam.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/cmp/AddQuestions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/cmp/Admin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/cmp/AdminLogin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/cmp/Dashboard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/cmp/Error.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/cmp/ExamAvailable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/cmp/ExamEdit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/cmp/Exams.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/cmp/Home.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/cmp/Listing.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/cmp/Login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/cmp/MainExam.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/cmp/Nav.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/cmp/Protected.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/cmp/QuestionEdit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/cmp/Questions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/cmp/Register.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/cmp/Selectexam.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/cmp/Startexam.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/cmp/UserDashboard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/cmp/ViewMarks.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/cmp/ViewQuestions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/cmp/Viewexam.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/cmp/board-admin.component.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/cmp/board-user.component.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/cmp/home.component.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/cmp/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/cmp/login.component.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/cmp/profile.component.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/cmp/register.component.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/cmp/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/footer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/serviceWorker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/services.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/services/PostData.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/services/auth-header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/services/auth.service.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/services/user.service.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/my-register/src/setupTests.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/serviceWorker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/services/PostData.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/setupTests.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Quiz Project/src/test/java/com/Registration/Registration/RegistrationApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_activation_jakarta_activation_1_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_jakarta_mail_1_6_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_mail_2_2_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_2_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/my-register/public/email.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/my-register/public/login.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/my-register/public/mail.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/my-register/src/cmp/Forgetpassword.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/my-register/src/cmp/Resetpassword.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/my-register/src/services/quiz.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../register_user/src/main/java/com/example/register_user/MyUserDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../register_user/src/main/java/com/example/register_user/MyUserDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../register_user/src/main/java/com/example/register_user/SecurityConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../register_user/src/main/java/com/example/register_user/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../register_user/src/main/java/com/example/register_user/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registration.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Registration.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/controllers/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/controllers/AuthController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/controllers/ExamController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/controllers/ExamController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/controllers/QuestionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/controllers/QuestionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/controllers/ResultController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/controllers/ResultController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/models/Exam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/models/Exam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/models/Rating.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/models/Rating.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/models/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/repository/QuestionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/repository/QuestionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/repository/ResultRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/repository/ResultRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/repository/RatingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/repository/RatingRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/repository/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/request/SignupRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/request/SignupRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/security/services/UserDetailsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/security/services/UserDetailsImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/security/services/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Registration/Registration/security/services/UserDetailsServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/my-register/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/my-register/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/my-register/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/my-register/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/my-register/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/my-register/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/my-register/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/my-register/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/my-register/src/cmp/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/my-register/src/cmp/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/my-register/src/cmp/admin/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/my-register/src/cmp/admin/dashboard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/my-register/src/cmp/admin/exam/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/my-register/src/cmp/admin/exam/list.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/my-register/src/cmp/admin/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/my-register/src/cmp/admin/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/my-register/src/cmp/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/my-register/src/cmp/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/my-register/src/cmp/admin/result/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/my-register/src/cmp/admin/result/list.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/my-register/src/cmp/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/my-register/src/cmp/profile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/my-register/src/cmp/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/my-register/src/cmp/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/my-register/src/cmp/user/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/my-register/src/cmp/user/dashboard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/my-register/src/cmp/user/exam/result.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/my-register/src/cmp/user/exam/result.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/my-register/src/cmp/user/exam/star.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/my-register/src/cmp/user/exam/star.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/my-register/src/cmp/user/exam/try.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/my-register/src/cmp/user/exam/try.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/my-register/src/services/auth.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/my-register/src/services/auth.service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/Registration/Registration/controllers/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Registration/Registration/controllers/AuthController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Registration/Registration/controllers/ExamController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Registration/Registration/controllers/ExamController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/Registration/Registration/controllers/QuestionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Registration/Registration/controllers/QuestionController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Registration/Registration/controllers/ResultController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Registration/Registration/controllers/ResultController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Registration/Registration/models/Exam.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Registration/Registration/models/Exam.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/Registration/Registration/models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Registration/Registration/models/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/Registration/Registration/repository/QuestionRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Registration/Registration/repository/QuestionRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/Registration/Registration/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Registration/Registration/repository/UserRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/Registration/Registration/request/SignupRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Registration/Registration/request/SignupRequest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/Registration/Registration/security/services/UserDetailsImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Registration/Registration/security/services/UserDetailsImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Registration/Registration/security/services/UserDetailsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Registration/Registration/security/services/UserDetailsServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,9 +79,16 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.Registration.Registration.security.services" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="RegistrationApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -259,10 +140,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="488" y="57" key="#com.intellij.ide.util.MemberChooser" timestamp="1591600047679">
+    <state x="488" y="57" key="#com.intellij.ide.util.MemberChooser" timestamp="1593671514572">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="57" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1591600047679" />
+    <state x="488" y="57" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1593671514572" />
     <state x="484" y="233" width="436" height="266" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1588087040528">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -279,22 +160,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="122" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1586664726956" />
-    <state width="1323" height="154" key="GridCell.Tab.0.bottom" timestamp="1592555280647">
+    <state width="1323" height="121" key="GridCell.Tab.0.bottom" timestamp="1593711338112">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="154" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592555280647" />
-    <state width="1323" height="154" key="GridCell.Tab.0.center" timestamp="1592555280646">
+    <state width="1323" height="121" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1593711338112" />
+    <state width="1323" height="121" key="GridCell.Tab.0.center" timestamp="1593711338112">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="154" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1592555280646" />
-    <state width="1323" height="154" key="GridCell.Tab.0.left" timestamp="1592555280646">
+    <state width="1323" height="121" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1593711338112" />
+    <state width="1323" height="121" key="GridCell.Tab.0.left" timestamp="1593711338112">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="154" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1592555280646" />
-    <state width="1323" height="154" key="GridCell.Tab.0.right" timestamp="1592555280647">
+    <state width="1323" height="121" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1593711338112" />
+    <state width="1323" height="121" key="GridCell.Tab.0.right" timestamp="1593711338112">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="154" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1592555280647" />
+    <state width="1323" height="121" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1593711338112" />
     <state width="1323" height="97" key="GridCell.Tab.1.bottom" timestamp="1588100216968">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -311,18 +192,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="97" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1588100216968" />
-    <state x="213" y="22" key="Maven.ArtifactSearchDialog" timestamp="1591617016615">
+    <state x="213" y="22" key="Maven.ArtifactSearchDialog" timestamp="1593413949118">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="213" y="22" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1591617016615" />
+    <state x="213" y="22" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1593413949118" />
     <state x="350" y="69" key="NewModule_or_Project.wizard" timestamp="1586664730787">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="350" y="69" key="NewModule_or_Project.wizard/0.0.1366.728@0.0.1366.728" timestamp="1586664730787" />
-    <state x="163" y="0" key="SettingsEditor" timestamp="1586006220240">
+    <state x="163" y="0" key="SettingsEditor" timestamp="1592800386094">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1586006220240" />
+    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1592800386094" />
     <state x="391" y="191" key="com.intellij.ide.util.TipDialog" timestamp="1592494994014">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -335,18 +216,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="494" y="283" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1585570383889" />
-    <state x="328" y="91" width="710" height="546" key="find.popup" timestamp="1585668912398">
+    <state x="328" y="91" width="710" height="546" key="find.popup" timestamp="1593430186748">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="328" y="91" width="710" height="546" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1585668912398" />
+    <state x="328" y="91" width="710" height="546" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1593430186748" />
     <state x="65" y="0" key="new project wizard" timestamp="1589715707502">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1589715707502" />
-    <state x="391" y="0" key="refactoring.ChangeSignatureDialog" timestamp="1589346038764">
+    <state x="391" y="0" key="refactoring.ChangeSignatureDialog" timestamp="1593235816522">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="391" y="0" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1589346038764" />
+    <state x="391" y="0" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1593235816522" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1590642323509">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -361,7 +242,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/Registration/Registration/controllers/AuthController.java</url>
-          <line>106</line>
+          <line>118</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
