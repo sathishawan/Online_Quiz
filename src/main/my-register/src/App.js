@@ -24,6 +24,7 @@ import AdminQuestionAdd from "./cmp/admin/question/add";
 import AdminQuestionView from "./cmp/admin/question/view";
 import AdminQuestionEdit from "./cmp/admin/question/edit";
 import AdminMarkView from "./cmp/admin/result/list";
+import AdminQuestionUpload from "./cmp/admin/question/uploadfile";
 
 import UserDashboard from "./cmp/user/dashboard";
 import UserExamList from "./cmp/user/exam/list";
@@ -190,6 +191,7 @@ class App extends Component {
               <Protected exact path="/admin/question/view" component={AdminQuestionView} />
               <Protected exact path='/admin/question/edit/:id' component={AdminQuestionEdit} />
               <Protected exact path='/admin/result/list' component={AdminMarkView} />
+              <Protected exact path='/admin/question/uploadfile' component={AdminQuestionUpload} />
 
 
               <Route exact path="/user/login" component={Login} />

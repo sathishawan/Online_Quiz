@@ -16,6 +16,9 @@ export default class AdminQuestionList extends Component {
     onList = () => {
         this.props.history.push("/admin/question/list")
     }
+    upload = () => {
+         this.props.history.push("/admin/question/uploadfile")
+    }
 
     render() {
         return (
@@ -43,7 +46,7 @@ export default class AdminQuestionList extends Component {
                             </div>
                         </div>
                         <div class="col-lg-4">
-                            <div class="demo-content bg8" onClick={this.onList}>
+                            <div class="demo-content bg8" onClick={this.upload}>
                                 <div class="center" >
                                     <div> <i class="fa fa-cloud-upload fa-3x"></i> </div>
                                     <div class="list"><h2>File Import</h2></div>
